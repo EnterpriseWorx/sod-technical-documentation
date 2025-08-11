@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>The Rule Violation Mitigation Approval Process - Segregation of Duty Technical Documentation</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "The Rule Violation Mitigation Approval Process";
+        var mkdocs_page_input_path = "appendix/mitigation-approval-process.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+ <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Segregation of Duty Technical Documentation
+        </a>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">SOD User Documentation</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../home/rule-list/">Rule list</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mitigation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-tickets/">Mitigation Tickets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-by-location/">Mitigation By Location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-by-operator/">Mitigation By Operator</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Approvals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../approvals/cancel-mitigiations/">Cancel Mitigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../approvals/approve-reject-mitigations/">Approve/Reject Mitigations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Administration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/users/">Users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/roles/">Roles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/sources/">Sources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../administration/configuration/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">The Rule Violation Mitigation Approval Process</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#creating-an-approval-role">Creating an Approval Role</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#assigning-approver-roles-to-rules">Assigning Approver Roles to Rules</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#creating-a-mitigation-that-requires-approval">Creating a mitigation that requires approval</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#approving-a-mitigation">Approving a mitigation</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Segregation of Duty Technical Documentation</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Appendix</li>
+      <li class="breadcrumb-item active">The Rule Violation Mitigation Approval Process</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="the-rule-violation-mitigation-approval-process">The Rule Violation Mitigation Approval Process</h1>
+<p>The SOD tool has an optional opt-in mitigation approval process. This is a
+feature that allows you to assign specific rules to an approval role, to allow
+for better controls around rule violation mitigations. It is only applicable for
+<strong>Mitigation By Operator</strong> mitigation method at this point in time.</p>
+<h2 id="creating-an-approval-role">Creating an Approval Role</h2>
+<p>Any role that is assigned the <strong>RuleMitigationApprove</strong> permission is able to
+approve a mitigation for any rules that have this role as the <strong>Approver Role</strong>.</p>
+<p>E.g. In this example I have created a custom role called <strong>Mitigation Approver</strong>
+that is assigned the <strong>RuleMitigationApprove</strong> permission. This role is able to
+approve mitigation requests for rules that have this role assigned as the
+<strong>Approver Role</strong>.</p>
+<p><a class="glightbox" href="../../img/mitigation-approval-process/role-with-RuleMitigationApprove-permission.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/mitigation-approval-process/role-with-RuleMitigationApprove-permission.png" /></a></p>
+<h2 id="assigning-approver-roles-to-rules">Assigning Approver Roles to Rules</h2>
+<p>Now if we edit an existing rule we can fill in the <strong>Approver Role</strong> field if
+violations of this rule requires mitigation approval. If rule violations do not
+require approval we can set the <strong>Approver Role</strong> field back to <strong>No approver</strong>.</p>
+<p>Note that as mentioned above that only roles with the <strong>RuleMitigationApprove</strong>
+permission are selectable in the <strong>Approver Role</strong> dropdown.</p>
+<p><a class="glightbox" href="../../img/mitigation-approval-process/assign-approver-role-to-rule.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/mitigation-approval-process/assign-approver-role-to-rule.png" /></a></p>
+<h2 id="creating-a-mitigation-that-requires-approval">Creating a mitigation that requires approval</h2>
+<p>When you are performing a <strong>Mitigation By Operator</strong>, if the potential
+mitigation has an <strong>Approver Role</strong> assigned, then once the user selects
+<strong>Update Operator Mitigations</strong> then the rule violation mitigations will be
+assigned to any user with the assigned <strong>Approver Role</strong> to approve or reject
+the mitigation. In this case any user with the custom <strong>Mitigation Approver</strong>
+role will be able to approve or reject the mitigation.</p>
+<p><a class="glightbox" href="../../img/mitigation-approval-process/creating-a-mitigation.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/mitigation-approval-process/creating-a-mitigation.png" /></a></p>
+<p>You can choose to cancel mitigations that you have created, if you created the
+mitigation by mistake. If you select the <strong>Cancel Mitigations</strong> tab it will show
+you all the mitigations that you created that are waiting for approval, that you
+can cancel. Note that you can only cancel the mitigations that you have created.</p>
+<p>To cancel a mitigation waiting for approval, just select the mitigation(s) you
+want to cancel, add a comment if needed and click the <strong>Cancel</strong> button.</p>
+<p><a class="glightbox" href="../../img/mitigation-approval-process/cancel-mitigations.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/mitigation-approval-process/cancel-mitigations.png" /></a></p>
+<h2 id="approving-a-mitigation">Approving a mitigation</h2>
+<p>If you log in as a user that has a role with the <strong>RuleMitigationApprove</strong>
+permission, then you can select the <strong>Approve/Reject Mitigations</strong> tab to
+approve or reject rule violation mitigations. In the same way as canceling
+mitigations, you just select the mitigations that you wish to approve (or
+reject), add an optional comment and click on the <strong>Approve</strong> or <strong>Reject</strong>
+button.</p>
+<p><a class="glightbox" href="../../img/mitigation-approval-process/mitigation-approve-or-reject.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/mitigation-approval-process/mitigation-approve-or-reject.png" /></a></p>
+<p>Only once the mitigations are approved then they will be marked as <strong>Currently
+Mitigated</strong> on the <strong>Mitigation By Operator</strong> screen and in the PowerBI SOD
+reports.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../administration/configuration/" class="btn btn-neutral float-left" title="Configuration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../administration/configuration/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
+</html>

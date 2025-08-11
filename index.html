@@ -12,7 +12,7 @@
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Welcome to MkDocs";
+        var mkdocs_page_name = "SOD User Documentation";
         var mkdocs_page_input_path = "index.md";
         var mkdocs_page_url = null;
       </script>
@@ -22,7 +22,11 @@
     <![endif]-->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
       <script>hljs.highlightAll();</script> 
-</head>
+ <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+    html.glightbox-open { overflow: initial; height: 100%; }
+    .gslide-title { margin-top: 0px; user-select: text; }
+    .gslide-desc { color: #666; user-select: text; }
+    .gslide-image img { background: white; }</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
 
 <body class="wy-body-for-nav" role="document">
 
@@ -31,23 +35,64 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="." class="icon icon-home"> Segregation of Duty Technical Documentation
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Welcome to MkDocs</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">SOD User Documentation</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#commands">Commands</a>
+    <li class="toctree-l2"><a class="reference internal" href="#home">Home</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#project-layout">Project layout</a>
+    <li class="toctree-l2"><a class="reference internal" href="#mitigation">Mitigation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#approvals">Approvals</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#administration">Administration</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#appendix">Appendix</a>
     </li>
     </ul>
                 </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Home</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="home/rule-list/">Rule list</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Mitigation</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="mitigation/mitigation-tickets/">Mitigation Tickets</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mitigation/mitigation-by-location/">Mitigation By Location</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="mitigation/mitigation-by-operator/">Mitigation By Operator</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Approvals</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="approvals/cancel-mitigiations/">Cancel Mitigations</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="approvals/approve-reject-mitigations/">Approve/Reject Mitigations</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Administration</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="administration/license/">License</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="administration/users/">Users</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="administration/roles/">Roles</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="administration/sources/">Sources</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="administration/configuration/">Configuration</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Appendix</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="appendix/mitigation-approval-process/">The Rule Violation Mitigation Approval Process</a>
+                  </li>
               </ul>
       </div>
     </div>
@@ -63,7 +108,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Welcome to MkDocs</li>
+      <li class="breadcrumb-item active">SOD User Documentation</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -72,24 +117,42 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="welcome-to-mkdocs">Welcome to MkDocs</h1>
-<p>For full documentation visit <a href="https://www.mkdocs.org">mkdocs.org</a>.</p>
-<h2 id="commands">Commands</h2>
+                <h1 id="sod-user-documentation">SOD User Documentation</h1>
+<p>This is the user documentation for the Segregation of Duty application. This
+documentation is a work in progress</p>
+<h2 id="home">Home</h2>
 <ul>
-<li><code>mkdocs new [dir-name]</code> - Create a new project.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server.</li>
-<li><code>mkdocs build</code> - Build the documentation site.</li>
-<li><code>mkdocs -h</code> - Print help message and exit.</li>
+<li><a href="home/rule-list/">Rule list</a></li>
 </ul>
-<h2 id="project-layout">Project layout</h2>
-<pre><code>mkdocs.yml    # The configuration file.
-docs/
-    index.md  # The documentation homepage.
-    ...       # Other markdown pages, images and other files.
-</code></pre>
+<h2 id="mitigation">Mitigation</h2>
+<ul>
+<li><a href="mitigation/mitigation-tickets/">Mitigation Tickets</a></li>
+<li><a href="mitigation/mitigation-by-location/">Mitigation By Location</a></li>
+<li><a href="mitigation/mitigation-by-operator/">Mitigation By Operator</a></li>
+</ul>
+<h2 id="approvals">Approvals</h2>
+<ul>
+<li><a href="approvals/cancel-mitigiations/">Cancel Mitigations</a></li>
+<li><a href="approvals/approve-reject-mitigations/">Approve/Reject Mitigations</a></li>
+</ul>
+<h2 id="administration">Administration</h2>
+<ul>
+<li><a href="administration/license/">License</a></li>
+<li><a href="administration/users/">Users</a></li>
+<li><a href="administration/roles/">Roles</a></li>
+<li><a href="administration/sources/">Sources</a></li>
+<li><a href="administration/configuration/">Configuration</a></li>
+</ul>
+<h2 id="appendix">Appendix</h2>
+<ul>
+<li><a href="appendix/mitigation-approval-process/">The Mitigation Approval Process</a></li>
+</ul>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="home/rule-list/" class="btn btn-neutral float-right" title="Rule list">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -112,23 +175,25 @@ docs/
     
     
     
+      <span><a href="home/rule-list/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
   </span>
 </div>
     <script src="js/jquery-3.6.0.min.js"></script>
     <script>var base_url = ".";</script>
     <script src="js/theme_extra.js"></script>
     <script src="js/theme.js"></script>
-      <script src="search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
         });
     </script>
 
-</body>
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+</script></body>
 </html>
 
 <!--
 MkDocs version : 1.6.1
-Build Date UTC : 2024-11-04 11:53:21.996867+00:00
+Build Date UTC : 2025-08-11 09:28:04.001486+00:00
 -->
