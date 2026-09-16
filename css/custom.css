@@ -1,0 +1,302 @@
+/* VerityRisk brand colors (from the application theme and logo)
+   Body chrome #17392b → #011105
+   Primary #000000 · Surfaces #ffffff / #f8f9fa
+   Accent green #6ebe71 · Typeface: Segoe UI, matching the VerityRisk UI */
+:root {
+  --brand-green: #17392b;
+  --brand-green-dark: #011105;
+  --brand-green-accent: #6ebe71;
+  --brand-green-light: #d4ecd5;
+  --brand-green-lighter: #f6fbf6;
+
+  --primary-color: #000000;
+  --primary-color-dark: #1a1a1a;
+  --primary-color-hover: #333333;
+  --primary-color-text: #ffffff;
+  --text-color: #212529;
+  --text-color-secondary: #6c757d;
+  --surface-a: #ffffff;
+  --surface-b: #f8f9fa;
+  --surface-d: #dee2e6;
+  --border-color: #dee2e6;
+
+  --font-family:
+    "Segoe UI", SegoeUI, "Segoe UI Web", -apple-system, BlinkMacSystemFont,
+    Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
+
+html,
+body,
+.wm-page-content,
+.navbar,
+.wm-toc-pane,
+.wm-toctree,
+.btn,
+.form-control {
+  font-family: var(--font-family);
+}
+
+body {
+  background: linear-gradient(135deg, #17392b 25%, #011105 75%);
+  color: var(--text-color);
+  font-size: 12pt;
+  line-height: 1.55;
+}
+
+/***********************************************************************
+ Top bar — match the VerityRisk app chrome (light surface)
+ ***********************************************************************/
+
+.navbar,
+.wm-top-tool-expanded {
+  background-color: var(--surface-a);
+  box-shadow:
+    0 3px 5px rgba(0, 0, 0, 0.02),
+    0 0 2px rgba(0, 0, 0, 0.05),
+    0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.wm-top-brand,
+.wm-top-link,
+.wm-top-link:hover,
+.wm-top-link:active,
+.wm-top-link:visited,
+.wm-top-link:focus {
+  color: var(--brand-green);
+}
+
+.wm-top-logo {
+  width: auto;
+  height: 40px;
+  margin-right: 12px;
+  vertical-align: middle;
+}
+
+.wm-top-title {
+  font-weight: 600;
+  color: var(--primary-color);
+}
+
+.wm-top-version {
+  border-color: var(--brand-green);
+  color: var(--brand-green);
+}
+
+.navbar .btn-default,
+.wm-top-tool .btn-default {
+  background-color: var(--surface-a);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.navbar .btn-default:hover,
+.navbar .btn-default:focus,
+.wm-top-tool .btn-default:hover,
+.wm-top-tool .btn-default:focus {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+  color: var(--primary-color-text);
+}
+
+.wm-top-search .form-control:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 1px #000000;
+}
+
+/***********************************************************************
+ Side navigation — white card, like the VerityRisk sidebar
+ ***********************************************************************/
+
+.wm-toc-pane {
+  background-color: var(--surface-a);
+  border-right-color: var(--surface-d);
+}
+
+.wm-toctree {
+  font-size: 10pt;
+}
+
+.wm-toctree a,
+.wm-toctree a:visited,
+.wm-toctree a:hover,
+.wm-toctree a:focus {
+  color: var(--text-color);
+}
+
+.wm-toc-li.wm-current,
+.wm-toc-li.wm-current:hover {
+  background-color: var(--brand-green);
+  color: var(--primary-color-text);
+}
+
+.wm-toc-li.wm-current a,
+.wm-toc-li.wm-current a:visited,
+.wm-toc-li.wm-current a:hover,
+.wm-toc-li.wm-current a:focus {
+  color: var(--primary-color-text);
+  font-weight: 600;
+}
+
+.wm-toc-li:hover {
+  background-color: rgba(0, 0, 0, 0.04);
+}
+
+.wm-toc-li-nested.wm-page-toc {
+  border-left-color: var(--brand-green-accent);
+}
+
+/***********************************************************************
+ Content
+ ***********************************************************************/
+
+.wm-page-content {
+  max-width: 1100px;
+  background-color: var(--surface-a);
+}
+
+.wm-page-content a,
+.wm-page-content a:visited {
+  color: var(--brand-green);
+}
+
+.wm-page-content a:hover,
+.wm-page-content a:focus {
+  color: var(--brand-green-dark);
+}
+
+.wm-article-nav > a,
+.wm-article-nav > a:visited,
+.wm-article-nav > a:hover,
+.wm-article-nav > a:focus {
+  color: var(--brand-green);
+}
+
+.wm-page-content h1,
+.wm-page-content h2,
+.wm-page-content h3,
+.wm-page-content h4,
+.wm-page-content h5,
+.wm-page-content h6 {
+  font-family: var(--font-family);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.wm-page-content h1 {
+  font-size: 22pt;
+  margin: 0 0 1.25rem;
+  padding-bottom: 0.55rem;
+  color: var(--brand-green);
+  border-bottom: 2px solid var(--brand-green-accent);
+}
+
+.wm-page-content h2 {
+  font-size: 16pt;
+  margin: 2.4rem 0 0.9rem;
+  padding-bottom: 0.45rem;
+  color: var(--brand-green);
+  border-bottom: 1px solid var(--surface-d);
+}
+
+.wm-page-content h3 {
+  font-size: 13.5pt;
+  margin: 1.8rem 0 0.65rem;
+  color: var(--primary-color-dark);
+}
+
+.wm-page-content h4 {
+  font-size: 12.5pt;
+  margin: 1.4rem 0 0.5rem;
+  color: var(--primary-color-dark);
+}
+
+.wm-page-content h1:first-child,
+.wm-page-content h2:first-child {
+  margin-top: 0;
+}
+
+.wm-page-content p {
+  margin: 0 0 1rem;
+}
+
+.wm-page-content ul,
+.wm-page-content ol {
+  margin: 0 0 1.15rem;
+}
+
+.wm-page-content table,
+.wm-page-content figcaption,
+footer.wm-page-content {
+  font-size: 10pt;
+}
+
+.wm-page-content table.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: var(--surface-b);
+}
+
+footer.wm-page-content {
+  color: var(--text-color-secondary);
+}
+
+footer.wm-page-content a,
+footer.wm-page-content a:visited {
+  color: var(--brand-green);
+}
+
+/***********************************************************************
+ Search dropdown
+ ***********************************************************************/
+
+#mkdocs-search-results .dropdown-header {
+  color: var(--brand-green);
+}
+
+#mkdocs-search-results a {
+  color: var(--text-color);
+}
+
+/***********************************************************************
+ Admonitions
+ ***********************************************************************/
+
+.admonition {
+  border-left-width: 4px;
+}
+
+.admonition-title {
+  color: inherit;
+}
+
+.admonition.tip,
+.admonition.Tip {
+  color: #1e4620;
+  background-color: #eaf7e4;
+  border-color: #6ebe71;
+}
+
+.admonition.note,
+.admonition.Note,
+.admonition.info,
+.admonition.Info {
+  color: #17392b;
+  background-color: #d4ecd5;
+  border-color: #419544;
+}
+
+.admonition.warning,
+.admonition.Warning,
+.admonition.caution,
+.admonition.attention {
+  color: #6b4f12;
+  background-color: #fcf8e3;
+  border-color: #c09853;
+}
+
+.admonition.danger,
+.admonition.Danger,
+.admonition.error {
+  color: #7a2e2c;
+  background-color: #f8eceb;
+  border-color: #b94a48;
+}

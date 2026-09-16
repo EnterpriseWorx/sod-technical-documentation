@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Configuration - VerityRisk User Documentation</title>
+    <title>Cancel Mitigations - VerityRisk User Documentation</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -33,9 +33,9 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Configuration", url: "#_top", children: [
-              {title: "Open Configuration", url: "#open-configuration" },
-              {title: "Update the schedule", url: "#update-the-schedule" },
+          {title: "Cancel Mitigations", url: "#_top", children: [
+              {title: "Open Cancel Mitigations", url: "#open-cancel-mitigations" },
+              {title: "Cancel a request", url: "#cancel-a-request" },
               {title: "Related pages", url: "#related-pages" },
           ]},
         ];
@@ -68,20 +68,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../appendix/mitigation-approval-process/" class="btn btn-xs btn-default pull-right">
+      <a href="../approve-reject-mitigations/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../appendix/mitigation-approval-process/" class="btn btn-xs btn-link">
-        The Rule Violation Mitigation Approval Process
+      <a href="../approve-reject-mitigations/" class="btn btn-xs btn-link">
+        Approve/Reject Mitigations
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../sources/" class="btn btn-xs btn-default pull-left">
+      <a href="../../mitigation/mitigation-by-operator/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../sources/" class="btn btn-xs btn-link">
-        Sources
+        Previous</a><a href="../../mitigation/mitigation-by-operator/" class="btn btn-xs btn-link">
+        Mitigation By Operator
       </a>
     </div>
     
@@ -89,68 +89,82 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="configuration">Configuration</h1>
-<p>The <strong>Configuration</strong> page controls when VerityRisk loads source data and how
-long snapshots are kept.</p>
-<p><strong>Permission:</strong> <code>AdminConfigurationUpdate</code></p>
-<h2 id="open-configuration">Open Configuration</h2>
+    <h1 id="cancel-mitigations">Cancel Mitigations</h1>
+<p><strong>Cancel Mitigations</strong> lets you withdraw operator mitigation requests that you
+submitted and that are still waiting for approval.</p>
+<p><strong>Permission:</strong> <code>RuleMitigateUpdate</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can only cancel requests that you created. Approvers use
+<a href="../approve-reject-mitigations/">Approve/Reject Mitigations</a> instead.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Location mitigations are not listed here. They apply immediately and cannot
+be cancelled through this page.</p>
+</div>
+<h2 id="open-cancel-mitigations">Open Cancel Mitigations</h2>
 <ul>
-<li>Navigate to <strong>Administration &gt;&gt; Configuration</strong>.</li>
+<li>Navigate to <strong>approvals &gt;&gt; Cancel Mitigations</strong>.</li>
 </ul>
+<p>The menu label includes a count of your pending requests, for example <strong>Cancel
+Mitigations (3)</strong>.</p>
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>Editable</th>
+<th>Column</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Load Schedule</td>
-<td>Yes</td>
-<td>Cron expression for the permission and violation load. The default is <code>0 5-20 * * *</code> (hourly from 05:00 to 20:00).</td>
+<td>Rule ID</td>
+<td>Rule the mitigation applies to</td>
 </tr>
 <tr>
-<td>Load Schedule Description</td>
-<td>No</td>
-<td>Human-readable form of the load schedule</td>
+<td>Business Unit</td>
+<td>Source instance</td>
 </tr>
 <tr>
-<td>Snapshot Schedule</td>
-<td>Yes</td>
-<td>Cron expression for database snapshots. The default is <code>0 4 * * *</code> (daily at 04:00).</td>
+<td>Operator</td>
+<td>Operator affected by the request</td>
 </tr>
 <tr>
-<td>Snapshot Schedule Description</td>
-<td>No</td>
-<td>Human-readable form of the snapshot schedule</td>
+<td>Ticket Number</td>
+<td>Ticket attached when the request was submitted</td>
 </tr>
 <tr>
-<td>Snapshot Retention Days</td>
-<td>Yes</td>
-<td>How long snapshots are kept. The default is <strong>180</strong>.</td>
+<td>Approver Role Name</td>
+<td>Role that must approve the request</td>
+</tr>
+<tr>
+<td>Action</td>
+<td><strong>MitigationAdd</strong> or <strong>MitigationRemove</strong></td>
 </tr>
 </tbody>
 </table>
-<h2 id="update-the-schedule">Update the schedule</h2>
+<p>Only <strong>Pending</strong> requests that you captured are shown.</p>
+<h2 id="cancel-a-request">Cancel a request</h2>
 <ul>
-<li>Edit <strong>Load Schedule</strong>, <strong>Snapshot Schedule</strong>, and <strong>Snapshot Retention Days</strong>
-  as needed. Use standard five-field cron syntax.</li>
-<li>Click <strong>Save</strong>.</li>
-<li>Confirm that the description fields update to match the new expressions. A
-  <strong>Configuration Updated</strong> message confirms the save.</li>
+<li>Select one or more pending mitigations.</li>
+<li>Optionally enter a <strong>Comment</strong> (up to 150 characters).</li>
+<li>Click <strong>Cancel</strong>.</li>
+<li>Confirm the comment and the number of selected items.</li>
+<li>Click <strong>Confirm Changes</strong>, or <strong>Back</strong> to return without cancelling.</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>An invalid load schedule is rejected. Correct the cron expression and save
-again.</p>
+<p>If nothing is selected, VerityRisk shows <strong>No mitigation approvals selected</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cancelled requests do not change <strong>Currently Mitigated</strong> on
+<a href="../../mitigation/mitigation-by-operator/">Mitigation By Operator</a>. The
+underlying violation reappears on that list so you can submit it again if
+needed.</p>
 </div>
-<p>The load processes every <a href="../sources/">active source</a>, then recalculates
-violations against the current ruleset.</p>
 <h2 id="related-pages">Related pages</h2>
 <ul>
-<li><a href="../sources/">Sources</a></li>
+<li><a href="../../mitigation/mitigation-by-operator/">Mitigation By Operator</a></li>
+<li><a href="../approve-reject-mitigations/">Approve/Reject Mitigations</a></li>
+<li><a href="../../appendix/mitigation-approval-process/">The Rule Violation Mitigation Approval Process</a></li>
 </ul>
 
   <br>
@@ -164,20 +178,20 @@ violations against the current ruleset.</p>
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../appendix/mitigation-approval-process/" class="btn btn-xs btn-default pull-right">
+      <a href="../approve-reject-mitigations/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../appendix/mitigation-approval-process/" class="btn btn-xs btn-link">
-        The Rule Violation Mitigation Approval Process
+      <a href="../approve-reject-mitigations/" class="btn btn-xs btn-link">
+        Approve/Reject Mitigations
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../sources/" class="btn btn-xs btn-default pull-left">
+      <a href="../../mitigation/mitigation-by-operator/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../sources/" class="btn btn-xs btn-link">
-        Sources
+        Previous</a><a href="../../mitigation/mitigation-by-operator/" class="btn btn-xs btn-link">
+        Mitigation By Operator
       </a>
     </div>
     

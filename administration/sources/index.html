@@ -1,160 +1,273 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Sources - Segregation of Duty Technical Documentation</title>
-    <link rel="stylesheet" href="../../css/theme.css" />
-    <link rel="stylesheet" href="../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Sources";
-        var mkdocs_page_input_path = "administration/sources.md";
-        var mkdocs_page_url = null;
-      </script>
+    <meta name="author" content="EnterpriseWorx">
     
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Sources - VerityRisk User Documentation</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../../js/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Sources", url: "#_top", children: [
+              {title: "Open the source list", url: "#open-the-source-list" },
+              {title: "Add or edit a source", url: "#add-or-edit-a-source" },
+              {title: "Configure credentials", url: "#configure-credentials" },
+              {title: "Related pages", url: "#related-pages" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+      <script src="../../js/custom.js"></script> 
  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
     .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 
-<body class="wy-body-for-nav" role="document">
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Segregation of Duty Technical Documentation
-        </a>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">SOD User Documentation</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Home</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../home/rule-list/">Rule list</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Mitigation</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-tickets/">Mitigation Tickets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-by-location/">Mitigation By Location</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-by-operator/">Mitigation By Operator</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Approvals</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../approvals/cancel-mitigiations/">Cancel Mitigations</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../approvals/approve-reject-mitigations/">Approve/Reject Mitigations</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Administration</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../users/">Users</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../roles/">Roles</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Sources</a>
-    <ul class="current">
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Appendix</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/mitigation-approval-process/">The Rule Violation Mitigation Approval Process</a>
-                  </li>
-              </ul>
-      </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../configuration/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../configuration/" class="btn btn-xs btn-link">
+        Configuration
+      </a>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Segregation of Duty Technical Documentation</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Administration</li>
-      <li class="breadcrumb-item active">Sources</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="sources">Sources 🚧</h1>
-<p><strong>This page is under construction.</strong></p>
-<p>Please check back soon!</p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../roles/" class="btn btn-neutral float-left" title="Roles"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../configuration/" class="btn btn-neutral float-right" title="Configuration">Next <span class="icon icon-circle-arrow-right"></span></a>
+    
+    <div class="wm-article-nav">
+      <a href="../roles/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../roles/" class="btn btn-xs btn-link">
+        Roles
+      </a>
     </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+
+    <h1 id="sources">Sources</h1>
+<p>A source is a Syspro instance that VerityRisk loads operator access from. Each
+active source has its own staging database. The scheduled load (see
+<a href="../configuration/">Configuration</a>) pulls permission data from every active
+source, then evaluates it against the ruleset.</p>
+<p><strong>Permission:</strong> <code>AdminSourceUpdate</code></p>
+<h2 id="open-the-source-list">Open the source list</h2>
+<ul>
+<li>Navigate to <strong>Administration &gt;&gt; Sources</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business Key</td>
+<td>Short code for the instance (also used as the business unit)</td>
+</tr>
+<tr>
+<td>Business Unit Name</td>
+<td>Display name</td>
+</tr>
+<tr>
+<td>Source Type</td>
+<td><strong>Syspro7</strong> or <strong>Syspro8</strong></td>
+</tr>
+<tr>
+<td>Is Active</td>
+<td>Whether the source is included in loads</td>
+</tr>
+</tbody>
+</table>
+<h2 id="add-or-edit-a-source">Add or edit a source</h2>
+<ul>
+<li>Click <strong>Add</strong>, or click <strong>Edit</strong> on an existing source.</li>
+<li>
+<p>Complete the <strong>Edit Source</strong> form:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Business Key</td>
+<td>Yes</td>
+<td>Two-character code that identifies the instance</td>
+</tr>
+<tr>
+<td>Business Unit Name</td>
+<td>Yes</td>
+<td>Name shown in lists and reports (up to 100 characters)</td>
+</tr>
+<tr>
+<td>Staging Database Name</td>
+<td>Yes</td>
+<td>Database VerityRisk creates and uses for this instance (up to 100 characters)</td>
+</tr>
+<tr>
+<td>Source Type</td>
+<td>-</td>
+<td><strong>Syspro7</strong> or <strong>Syspro8</strong>. This controls how permission data is extracted.</td>
+</tr>
+<tr>
+<td>Is Active</td>
+<td>-</td>
+<td>Inactive sources are skipped during loads</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>Save</strong>. A <strong>Source updated successfully</strong> message confirms the change.</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Inactive sources are skipped during loads.</p>
+</div>
+<h3 id="source-types">Source types</h3>
+<ul>
+<li><strong>Syspro7</strong> - permission data is extracted by the Syspro COBOL extractor into
+  the staging database, then imported by VerityRisk.</li>
+<li><strong>Syspro8</strong> - VerityRisk reads permission data with SQL from the Syspro
+  database using the credentials you configure.</li>
+</ul>
+<h2 id="configure-credentials">Configure credentials</h2>
+<ul>
+<li>On the source list, click <strong>Credentials</strong>.</li>
+<li>
+<p>Complete <strong>Edit Source Credentials</strong>:</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Required</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Server Name (\ Instance Name)</td>
+<td>Yes</td>
+<td>SQL Server host and optional instance</td>
+</tr>
+<tr>
+<td>Database Name</td>
+<td>Yes</td>
+<td>Syspro database to read from</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>Yes</td>
+<td>SQL login</td>
+</tr>
+<tr>
+<td>Password</td>
+<td>Yes</td>
+<td>SQL password</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p>Click <strong>Test</strong> to verify the connection. A <strong>Connected to source
+  successfully</strong> message means the credentials work.</p>
+</li>
+<li>Click <strong>Save</strong>.</li>
+</ul>
+<h2 id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../configuration/">Configuration</a></li>
+<li><a href="../../home/violation-explorer/">Violation Explorer</a></li>
+</ul>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../configuration/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../configuration/" class="btn btn-xs btn-link">
+        Configuration
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../roles/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../roles/" class="btn btn-xs btn-link">
+        Roles
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content"><p>Copyright © 2026 EnterpriseWorx, maintained by the VerityRisk team.</p>
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../roles/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../configuration/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
-</div>
-    <script src="../../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "../..";</script>
-    <script src="../../js/theme_extra.js"></script>
-    <script src="../../js/theme.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
 
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 </script></body>

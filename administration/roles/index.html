@@ -1,160 +1,255 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Roles - Segregation of Duty Technical Documentation</title>
-    <link rel="stylesheet" href="../../css/theme.css" />
-    <link rel="stylesheet" href="../../css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "Roles";
-        var mkdocs_page_input_path = "administration/roles.md";
-        var mkdocs_page_url = null;
-      </script>
+    <meta name="author" content="EnterpriseWorx">
     
+    <link rel="shortcut icon" href="../../img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>Roles - VerityRisk User Documentation</title>
+    <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="../../css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/highlight.css">
+    <link href="../../css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="../../js/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+
+    <script src="../../js/jquery-3.2.1.min.js"></script>
+    <script src="../../js/bootstrap-3.3.7.min.js"></script>
+    <script src="../../js/highlight.pack.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '../..';
+      var is_top_frame = false;
+        
+        var pageToc = [
+          {title: "Roles", url: "#_top", children: [
+              {title: "Open the role list", url: "#open-the-role-list" },
+              {title: "Add or edit a role", url: "#add-or-edit-a-role" },
+              {title: "Permissions", url: "#permissions" },
+              {title: "Related pages", url: "#related-pages" },
+          ]},
+        ];
+
+    </script>
+    <script src="../../js/base.js"></script>
+      <script src="../../js/custom.js"></script> 
  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
     .gslide-image img { background: white; }</style> <script src="../../assets/javascripts/glightbox.min.js"></script></head>
 
-<body class="wy-body-for-nav" role="document">
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> Segregation of Duty Technical Documentation
-        </a>
-      </div>
 
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../..">SOD User Documentation</a>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Home</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../home/rule-list/">Rule list</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Mitigation</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-tickets/">Mitigation Tickets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-by-location/">Mitigation By Location</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../mitigation/mitigation-by-operator/">Mitigation By Operator</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Approvals</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../approvals/cancel-mitigiations/">Cancel Mitigations</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../../approvals/approve-reject-mitigations/">Approve/Reject Mitigations</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Administration</span></p>
-              <ul class="current">
-                  <li class="toctree-l1"><a class="reference internal" href="../license/">License</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../users/">Users</a>
-                  </li>
-                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Roles</a>
-    <ul class="current">
-    </ul>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../sources/">Sources</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="../configuration/">Configuration</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Appendix</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../appendix/mitigation-approval-process/">The Rule Violation Mitigation Approval Process</a>
-                  </li>
-              </ul>
-      </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../sources/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../sources/" class="btn btn-xs btn-link">
+        Sources
+      </a>
     </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">Segregation of Duty Technical Documentation</a>
-        
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
-          <li class="breadcrumb-item">Administration</li>
-      <li class="breadcrumb-item active">Roles</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
-  </ul>
-  <hr/>
-</div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="roles">Roles 🚧</h1>
-<p><strong>This page is under construction.</strong></p>
-<p>Please check back soon!</p>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="../users/" class="btn btn-neutral float-left" title="Users"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../sources/" class="btn btn-neutral float-right" title="Sources">Next <span class="icon icon-circle-arrow-right"></span></a>
+    
+    <div class="wm-article-nav">
+      <a href="../users/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../users/" class="btn btn-xs btn-link">
+        Users
+      </a>
     </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+    
+
+    <h1 id="roles">Roles</h1>
+<p>A role is a named set of permissions. Users receive access to VerityRisk screens
+only through the roles assigned to them.</p>
+<p><strong>Permission:</strong> <code>AdminRoleUpdate</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Roles used as a rule <strong>Approver Role</strong> must include
+<code>RuleMitigationApprove</code>. See
+<a href="../../appendix/mitigation-approval-process/">The Rule Violation Mitigation Approval Process</a>.</p>
+</div>
+<h2 id="open-the-role-list">Open the role list</h2>
+<ul>
+<li>Navigate to <strong>Administration &gt;&gt; Roles</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Column</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Name</td>
+<td>Role name</td>
+</tr>
+<tr>
+<td>Permission Count</td>
+<td>Number of permissions on the role</td>
+</tr>
+<tr>
+<td>Active</td>
+<td>Whether the role can be assigned to users and selected as an approver</td>
+</tr>
+</tbody>
+</table>
+<h2 id="add-or-edit-a-role">Add or edit a role</h2>
+<ul>
+<li>Click <strong>Add</strong>, or click <strong>Edit</strong> on an existing role.</li>
+<li>Enter a <strong>Name</strong>.</li>
+<li>Set <strong>Active</strong>. Inactive roles cannot be assigned to users.</li>
+<li>Select the <strong>Permissions</strong> the role should grant. At least one permission is
+  required.</li>
+<li>Click <strong>Save</strong>. A <strong>Role updated successfully</strong> message confirms the change.</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Permission names in the picker match the values below. There are no extra
+descriptions in the application.</p>
+</div>
+<h2 id="permissions">Permissions</h2>
+<table>
+<thead>
+<tr>
+<th>Permission</th>
+<th>Grants access to</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>RuleView</code></td>
+<td><a href="../../home/rule-list/">Rule List</a></td>
+</tr>
+<tr>
+<td><code>RuleUpdate</code></td>
+<td>Add and edit rules</td>
+</tr>
+<tr>
+<td><code>RuleExplorerView</code></td>
+<td><a href="../../home/violation-explorer/">Violation Explorer</a></td>
+</tr>
+<tr>
+<td><code>RuleMitigateView</code></td>
+<td><a href="../../mitigation/mitigation-by-location/">Mitigation By Location</a> and <a href="../../mitigation/mitigation-by-operator/">Mitigation By Operator</a></td>
+</tr>
+<tr>
+<td><code>RuleMitigateUpdate</code></td>
+<td>Save location and operator mitigations; <a href="../../approvals/cancel-mitigations/">Cancel Mitigations</a></td>
+</tr>
+<tr>
+<td><code>RuleMitigationApprove</code></td>
+<td><a href="../../approvals/approve-reject-mitigations/">Approve/Reject Mitigations</a>; makes the role selectable as a rule <strong>Approver Role</strong></td>
+</tr>
+<tr>
+<td><code>RuleMitigationTicketView</code></td>
+<td><a href="../../mitigation/mitigation-tickets/">Mitigation Tickets</a></td>
+</tr>
+<tr>
+<td><code>RuleMitigationTicketUpdate</code></td>
+<td>Add and edit mitigation tickets</td>
+</tr>
+<tr>
+<td><code>AdminUserUpdate</code></td>
+<td><a href="../users/">Users</a></td>
+</tr>
+<tr>
+<td><code>AdminRoleUpdate</code></td>
+<td>This <strong>Roles</strong> page</td>
+</tr>
+<tr>
+<td><code>AdminSourceUpdate</code></td>
+<td><a href="../sources/">Sources</a></td>
+</tr>
+<tr>
+<td><code>AdminLicenceUpdate</code></td>
+<td><a href="../license/">Licence</a></td>
+</tr>
+<tr>
+<td><code>AdminConfigurationUpdate</code></td>
+<td><a href="../configuration/">Configuration</a></td>
+</tr>
+<tr>
+<td><code>AdminDebugLoad</code></td>
+<td>Load debug tools (not shown in the main menu)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-pages">Related pages</h2>
+<ul>
+<li><a href="../users/">Users</a></li>
+<li><a href="../../home/rule-list/">Rule List</a></li>
+<li><a href="../../appendix/mitigation-approval-process/">The Rule Violation Mitigation Approval Process</a></li>
+</ul>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="../sources/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="../sources/" class="btn btn-xs btn-link">
+        Sources
+      </a>
+    </div>
+    
+    <div class="wm-article-nav">
+      <a href="../users/" class="btn btn-xs btn-default pull-left">
+        <i class="fa fa-chevron-left" aria-hidden="true"></i>
+        Previous</a><a href="../users/" class="btn btn-xs btn-link">
+        Users
+      </a>
+    </div>
+    
+  </div>
+
+    <br>
+</div>
+
+<footer class="container-fluid wm-page-content"><p>Copyright © 2026 EnterpriseWorx, maintained by the VerityRisk team.</p>
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
 </footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-      <span><a href="../users/" style="color: #fcfcfc">&laquo; Previous</a></span>
-    
-    
-      <span><a href="../sources/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
-</div>
-    <script src="../../js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = "../..";</script>
-    <script src="../../js/theme_extra.js"></script>
-    <script src="../../js/theme.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
 
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 </script></body>

@@ -11,7 +11,7 @@
     
     <link rel="shortcut icon" href="../../img/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-    <title>Configuration - VerityRisk User Documentation</title>
+    <title>Violation Explorer - VerityRisk User Documentation</title>
     <link href="../../css/bootstrap-3.3.7.min.css" rel="stylesheet">
     <link href="../../css/font-awesome-4.7.0.css" rel="stylesheet">
     <link href="../../css/base.css" rel="stylesheet">
@@ -33,9 +33,10 @@
       var is_top_frame = false;
         
         var pageToc = [
-          {title: "Configuration", url: "#_top", children: [
-              {title: "Open Configuration", url: "#open-configuration" },
-              {title: "Update the schedule", url: "#update-the-schedule" },
+          {title: "Violation Explorer", url: "#_top", children: [
+              {title: "Open Violation Explorer", url: "#open-violation-explorer" },
+              {title: "Calculate violations", url: "#calculate-violations" },
+              {title: "Results", url: "#results" },
               {title: "Related pages", url: "#related-pages" },
           ]},
         ];
@@ -68,20 +69,20 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../appendix/mitigation-approval-process/" class="btn btn-xs btn-default pull-right">
+      <a href="../../mitigation/mitigation-tickets/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../appendix/mitigation-approval-process/" class="btn btn-xs btn-link">
-        The Rule Violation Mitigation Approval Process
+      <a href="../../mitigation/mitigation-tickets/" class="btn btn-xs btn-link">
+        Mitigation Tickets
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../sources/" class="btn btn-xs btn-default pull-left">
+      <a href="../rule-list/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../sources/" class="btn btn-xs btn-link">
-        Sources
+        Previous</a><a href="../rule-list/" class="btn btn-xs btn-link">
+        Rule List
       </a>
     </div>
     
@@ -89,68 +90,86 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     
 
-    <h1 id="configuration">Configuration</h1>
-<p>The <strong>Configuration</strong> page controls when VerityRisk loads source data and how
-long snapshots are kept.</p>
-<p><strong>Permission:</strong> <code>AdminConfigurationUpdate</code></p>
-<h2 id="open-configuration">Open Configuration</h2>
+    <h1 id="violation-explorer">Violation Explorer</h1>
+<p><strong>Violation Explorer</strong> lets you test which segregation-of-duty rules would be
+violated for a proposed combination of groups, roles, and activities. Use it to
+explore access before it is granted, or to understand why an operator already
+appears as a violation.</p>
+<p><strong>Permission:</strong> <code>RuleExplorerView</code></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This screen does not change mitigations or operator access. It only
+calculates what the current ruleset would report.</p>
+</div>
+<h2 id="open-violation-explorer">Open Violation Explorer</h2>
 <ul>
-<li>Navigate to <strong>Administration &gt;&gt; Configuration</strong>.</li>
+<li>Navigate to <strong>Home &gt;&gt; Violation Explorer</strong>.</li>
 </ul>
+<h2 id="calculate-violations">Calculate violations</h2>
+<ul>
+<li>Select a <strong>Business Unit</strong>. This loads the groups, roles, activities, and
+  operators for that Syspro source.</li>
+<li>Optionally select <strong>Load from Operator</strong>. The operator's current groups,
+  roles, and activities are copied into the form so you can start from a real
+  profile.</li>
+<li>Adjust <strong>Groups</strong>, <strong>Roles</strong>, and <strong>Activities</strong> as needed. <strong>Groups</strong> is
+  required.</li>
+<li>Click <strong>Calculate Violations</strong>.</li>
+</ul>
+<p>If nothing matches the ruleset, a <strong>No violations found</strong> message is shown.</p>
+<h2 id="results">Results</h2>
 <table>
 <thead>
 <tr>
-<th>Field</th>
-<th>Editable</th>
+<th>Column</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Load Schedule</td>
-<td>Yes</td>
-<td>Cron expression for the permission and violation load. The default is <code>0 5-20 * * *</code> (hourly from 05:00 to 20:00).</td>
+<td>Rule ID</td>
+<td>Rule that would be violated</td>
 </tr>
 <tr>
-<td>Load Schedule Description</td>
-<td>No</td>
-<td>Human-readable form of the load schedule</td>
+<td>Program A / Program B</td>
+<td>Programs on each side of the rule</td>
 </tr>
 <tr>
-<td>Snapshot Schedule</td>
-<td>Yes</td>
-<td>Cron expression for database snapshots. The default is <code>0 4 * * *</code> (daily at 04:00).</td>
+<td>Activities A / Activities B</td>
+<td>Activities on each side of the rule</td>
 </tr>
 <tr>
-<td>Snapshot Schedule Description</td>
-<td>No</td>
-<td>Human-readable form of the snapshot schedule</td>
+<td>Business Unit</td>
+<td>Source instance used for the calculation</td>
 </tr>
 <tr>
-<td>Snapshot Retention Days</td>
-<td>Yes</td>
-<td>How long snapshots are kept. The default is <strong>180</strong>.</td>
+<td>Company Code / Company Name</td>
+<td>Company in which the conflict occurs</td>
+</tr>
+<tr>
+<td>Access Type</td>
+<td>How the two sides of the rule are reached: <strong>Group</strong>, <strong>Role</strong>, or <strong>Hybrid</strong></td>
+</tr>
+<tr>
+<td>Access Code A / Access Code B</td>
+<td>Group or role that satisfies each side</td>
+</tr>
+<tr>
+<td>Risk Rating</td>
+<td>Risk rating from the rule</td>
 </tr>
 </tbody>
 </table>
-<h2 id="update-the-schedule">Update the schedule</h2>
+<p>You can search, filter, sort, and export the results.</p>
+<h3 id="access-types">Access types</h3>
 <ul>
-<li>Edit <strong>Load Schedule</strong>, <strong>Snapshot Schedule</strong>, and <strong>Snapshot Retention Days</strong>
-  as needed. Use standard five-field cron syntax.</li>
-<li>Click <strong>Save</strong>.</li>
-<li>Confirm that the description fields update to match the new expressions. A
-  <strong>Configuration Updated</strong> message confirms the save.</li>
+<li><strong>Group</strong> - both sides of the rule are reached through group program grants.</li>
+<li><strong>Role</strong> - both sides are reached through role grants in the same company.</li>
+<li><strong>Hybrid</strong> - one side is reached through a group and the other through a role.</li>
 </ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>An invalid load schedule is rejected. Correct the cron expression and save
-again.</p>
-</div>
-<p>The load processes every <a href="../sources/">active source</a>, then recalculates
-violations against the current ruleset.</p>
 <h2 id="related-pages">Related pages</h2>
 <ul>
-<li><a href="../sources/">Sources</a></li>
+<li><a href="../rule-list/">Rule List</a></li>
 </ul>
 
   <br>
@@ -164,20 +183,20 @@ violations against the current ruleset.</p>
   <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
     
     <div class="wm-article-nav pull-right">
-      <a href="../../appendix/mitigation-approval-process/" class="btn btn-xs btn-default pull-right">
+      <a href="../../mitigation/mitigation-tickets/" class="btn btn-xs btn-default pull-right">
         Next
         <i class="fa fa-chevron-right" aria-hidden="true"></i>
       </a>
-      <a href="../../appendix/mitigation-approval-process/" class="btn btn-xs btn-link">
-        The Rule Violation Mitigation Approval Process
+      <a href="../../mitigation/mitigation-tickets/" class="btn btn-xs btn-link">
+        Mitigation Tickets
       </a>
     </div>
     
     <div class="wm-article-nav">
-      <a href="../sources/" class="btn btn-xs btn-default pull-left">
+      <a href="../rule-list/" class="btn btn-xs btn-default pull-left">
         <i class="fa fa-chevron-left" aria-hidden="true"></i>
-        Previous</a><a href="../sources/" class="btn btn-xs btn-link">
-        Sources
+        Previous</a><a href="../rule-list/" class="btn btn-xs btn-link">
+        Rule List
       </a>
     </div>
     

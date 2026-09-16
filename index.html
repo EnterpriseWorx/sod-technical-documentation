@@ -1,128 +1,234 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" />
-      <link rel="shortcut icon" href="img/favicon.ico" />
-    <title>Segregation of Duty Technical Documentation</title>
-    <link rel="stylesheet" href="css/theme.css" />
-    <link rel="stylesheet" href="css/theme_extra.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+  
+  
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="None">
+    <meta name="author" content="EnterpriseWorx">
     
-      <script>
-        // Current page data
-        var mkdocs_page_name = "SOD User Documentation";
-        var mkdocs_page_input_path = "index.md";
-        var mkdocs_page_url = null;
-      </script>
-    
+    <link rel="shortcut icon" href="./img/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>VerityRisk User Documentation</title>
+    <link href="./css/bootstrap-3.3.7.min.css" rel="stylesheet">
+    <link href="./css/font-awesome-4.7.0.css" rel="stylesheet">
+    <link href="./css/base.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/highlight.css">
+    <link href="css/custom.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="js/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
-      <script>hljs.highlightAll();</script> 
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap-3.3.7.min.js"></script>
+    <script src="./js/highlight.pack.js"></script>
+    
+      <script src="./js/elasticlunr.min.js"></script>
+    
+    <base target="_top">
+    <script>
+      var base_url = '.';
+      var is_top_frame = (window === window.parent);
+        
+        var pageToc = [
+          {title: "VerityRisk User Documentation", url: "#_top", children: [
+              {title: "Using the application", url: "#using-the-application" },
+              {title: "Home", url: "#home" },
+              {title: "Mitigation", url: "#mitigation" },
+              {title: "Approvals", url: "#approvals" },
+              {title: "Administration", url: "#administration" },
+              {title: "Appendix", url: "#appendix" },
+          ]},
+        ];
+
+    </script>
+    <script src="./js/base.js"></script>
+      <script src="js/custom.js"></script> 
  <link href="assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
     html.glightbox-open { overflow: initial; height: 100%; }
     .gslide-title { margin-top: 0px; user-select: text; }
     .gslide-desc { color: #666; user-select: text; }
     .gslide-image img { background: white; }</style> <script src="assets/javascripts/glightbox.min.js"></script></head>
 
-<body class="wy-body-for-nav" role="document">
+<body>
+<script>
+if (is_top_frame) { $('body').addClass('wm-top-page'); }
+</script>
 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
-    <div class="wy-side-scroll">
-      <div class="wy-side-nav-search">
-          <a href="." class="icon icon-home"> Segregation of Duty Technical Documentation
-        </a>
-      </div>
-
-      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">SOD User Documentation</a>
-    <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#home">Home</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#mitigation">Mitigation</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#approvals">Approvals</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#administration">Administration</a>
-    </li>
-    <li class="toctree-l2"><a class="reference internal" href="#appendix">Appendix</a>
-    </li>
-    </ul>
-                </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Home</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="home/rule-list/">Rule list</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Mitigation</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="mitigation/mitigation-tickets/">Mitigation Tickets</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="mitigation/mitigation-by-location/">Mitigation By Location</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="mitigation/mitigation-by-operator/">Mitigation By Operator</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Approvals</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="approvals/cancel-mitigiations/">Cancel Mitigations</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="approvals/approve-reject-mitigations/">Approve/Reject Mitigations</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Administration</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="administration/license/">License</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="administration/users/">Users</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="administration/roles/">Roles</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="administration/sources/">Sources</a>
-                  </li>
-                  <li class="toctree-l1"><a class="reference internal" href="administration/configuration/">Configuration</a>
-                  </li>
-              </ul>
-              <p class="caption"><span class="caption-text">Appendix</span></p>
-              <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="appendix/mitigation-approval-process/">The Rule Violation Mitigation Approval Process</a>
-                  </li>
-              </ul>
-      </div>
-    </div>
-    </nav>
-
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href=".">Segregation of Duty Technical Documentation</a>
+<nav class="navbar wm-page-top-frame">
+  <div class="container-fluid wm-top-container">
+    
+    <div class="wm-top-tool pull-right wm-vcenter">
+      <form class="dropdown wm-vcentered" id="wm-search-form" action="./search.html">
         
-      </nav>
-      <div class="wy-nav-content">
-        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
-  <ul class="wy-breadcrumbs">
-    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">SOD User Documentation</li>
-    <li class="wy-breadcrumbs-aside">
-    </li>
+        <button id="wm-search-show" class="btn btn-sm btn-default" type="submit"
+          ><i class="fa fa-search" aria-hidden="true"></i></button>
+
+        <div class="input-group input-group-sm wm-top-search">
+          <input type="text" name="q" class="form-control" id="mkdocs-search-query" placeholder="Search" autocomplete="off">
+          <span class="input-group-btn" role="search">
+            
+            <button class="btn btn-default dropdown-toggle collapse" data-toggle="dropdown" type="button"><span class="caret"></span></button>
+            <ul id="mkdocs-search-results" class="dropdown-menu dropdown-menu-right"></ul>
+            <button id="wm-search-go" class="btn btn-default" type="submit"><i class="fa fa-search" aria-hidden="true"></i></button>
+          </span>
+        </div>
+      </form>
+    </div>
+
+    
+    <div class="wm-top-tool wm-vcenter pull-right wm-small-left">
+      <button id="wm-toc-button" type="button" class="btn btn-sm btn-default wm-vcentered"><i class="fa fa-th-list" aria-hidden="true"></i></button>
+    </div>
+
+    
+    
+
+    
+    <a href="" class="wm-top-brand wm-top-link wm-vcenter">
+      
+        <img class="wm-top-logo" src="./img/logo-verityrisk.png"/>
+      
+      <div class="wm-top-title">
+        VerityRisk User Documentation<br>
+        
+      </div>
+    </a>
+  </div>
+</nav>
+
+  <div id="main-content" class="wm-page-top-frame">
+    
+<nav class="wm-toc-pane">
+  
+  <ul class="wm-toctree">
+        <li class="wm-toc-li wm-toc-lev1 "><a href="" class="wm-article-link wm-toc-text">Home</a>
+</li>
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Home Screens</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="home/rule-list/" class="wm-article-link wm-toc-text">Rule List</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="home/violation-explorer/" class="wm-article-link wm-toc-text">Violation Explorer</a>
+</li>
   </ul>
-  <hr/>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Mitigation</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mitigation/mitigation-tickets/" class="wm-article-link wm-toc-text">Mitigation Tickets</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mitigation/mitigation-by-location/" class="wm-article-link wm-toc-text">Mitigation By Location</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="mitigation/mitigation-by-operator/" class="wm-article-link wm-toc-text">Mitigation By Operator</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Approvals</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="approvals/cancel-mitigations/" class="wm-article-link wm-toc-text">Cancel Mitigations</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="approvals/approve-reject-mitigations/" class="wm-article-link wm-toc-text">Approve/Reject Mitigations</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Administration</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="administration/license/" class="wm-article-link wm-toc-text">Licence</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="administration/users/" class="wm-article-link wm-toc-text">Users</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="administration/roles/" class="wm-article-link wm-toc-text">Roles</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="administration/sources/" class="wm-article-link wm-toc-text">Sources</a>
+</li>
+      <li class="wm-toc-li wm-toc-lev2 "><a href="administration/configuration/" class="wm-article-link wm-toc-text">Configuration</a>
+</li>
+  </ul>
+</li>
+
+        <li class="wm-toc-li wm-toc-lev1 wm-toc-opener"><span class="wm-toc-text">Appendix</span>
+</li>
+<li class="wm-toc-li-nested collapse">
+  <ul class="wm-toctree">
+      <li class="wm-toc-li wm-toc-lev2 "><a href="appendix/mitigation-approval-process/" class="wm-article-link wm-toc-text">The Rule Violation Mitigation Approval Process</a>
+</li>
+  </ul>
+</li>
+
+  </ul>
+</nav>
+
+    <div class="wm-content-pane">
+      <iframe class="wm-article" name="article"></iframe>
+    </div>
+  </div>
+
+<div class="container-fluid wm-page-content">
+  <a name="_top"></a>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="home/rule-list/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="home/rule-list/" class="btn btn-xs btn-link">
+        Rule List
+      </a>
+    </div>
+    
+  </div>
+
+    
+
+    <h1 id="verityrisk-user-documentation">VerityRisk User Documentation</h1>
+<p>VerityRisk is a Segregation of Duties (SoD) application. It loads operator
+access from one or more Syspro sources, evaluates that access against a ruleset,
+and highlights conflicts. You can then mitigate those conflicts by location or
+by operator, with an optional approval process.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Menu items are shown only when your role includes the matching permission.
+If a page described here is missing from your menu, ask an administrator to
+review your role.</p>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-            <div class="section" itemprop="articleBody">
-              
-                <h1 id="sod-user-documentation">SOD User Documentation</h1>
-<p>This is the user documentation for the Segregation of Duty application. This
-documentation is a work in progress</p>
+<h2 id="using-the-application">Using the application</h2>
+<p>Most list pages share the same table tools:</p>
+<ul>
+<li><strong>Search</strong> filters every visible column.</li>
+<li>Column filters narrow the list by a specific field.</li>
+<li>Click a column heading to sort.</li>
+<li><strong>Clear Filter</strong> resets the current filters.</li>
+<li><strong>Export</strong> downloads the current view as an XLSX file.</li>
+<li>Page size options are typically 10, 25, or 50 rows.</li>
+</ul>
+<p>Edit screens often open as a dialog over the list. Use the page back control or
+close the dialog to return to the list.</p>
 <h2 id="home">Home</h2>
 <ul>
 <li><a href="home/rule-list/">Rule list</a></li>
+<li><a href="home/violation-explorer/">Violation Explorer</a></li>
 </ul>
 <h2 id="mitigation">Mitigation</h2>
 <ul>
@@ -132,12 +238,12 @@ documentation is a work in progress</p>
 </ul>
 <h2 id="approvals">Approvals</h2>
 <ul>
-<li><a href="approvals/cancel-mitigiations/">Cancel Mitigations</a></li>
+<li><a href="approvals/cancel-mitigations/">Cancel Mitigations</a></li>
 <li><a href="approvals/approve-reject-mitigations/">Approve/Reject Mitigations</a></li>
 </ul>
 <h2 id="administration">Administration</h2>
 <ul>
-<li><a href="administration/license/">License</a></li>
+<li><a href="administration/license/">Licence</a></li>
 <li><a href="administration/users/">Users</a></li>
 <li><a href="administration/roles/">Roles</a></li>
 <li><a href="administration/sources/">Sources</a></li>
@@ -147,53 +253,40 @@ documentation is a work in progress</p>
 <ul>
 <li><a href="appendix/mitigation-approval-process/">The Mitigation Approval Process</a></li>
 </ul>
-              
-            </div>
-          </div><footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
-        <a href="home/rule-list/" class="btn btn-neutral float-right" title="Rule list">Next <span class="icon icon-circle-arrow-right"></span></a>
+
+  <br>
+    
+
+    
+    
+      
+    
+
+  <div class="row wm-article-nav-buttons" role="navigation" aria-label="navigation">
+    
+    <div class="wm-article-nav pull-right">
+      <a href="home/rule-list/" class="btn btn-xs btn-default pull-right">
+        Next
+        <i class="fa fa-chevron-right" aria-hidden="true"></i>
+      </a>
+      <a href="home/rule-list/" class="btn btn-xs btn-link">
+        Rule List
+      </a>
     </div>
-
-  <hr/>
-
-  <div role="contentinfo">
-    <!-- Copyright etc -->
+    
   </div>
 
-  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
-</footer>
-          
-        </div>
-      </div>
-
-    </section>
-
-  </div>
-
-  <div class="rst-versions" role="note" aria-label="Versions">
-  <span class="rst-current-version" data-toggle="rst-current-version">
-    
-    
-    
-      <span><a href="home/rule-list/" style="color: #fcfcfc">Next &raquo;</a></span>
-    
-  </span>
+    <br>
 </div>
-    <script src="js/jquery-3.6.0.min.js"></script>
-    <script>var base_url = ".";</script>
-    <script src="js/theme_extra.js"></script>
-    <script src="js/theme.js"></script>
-    <script>
-        jQuery(function () {
-            SphinxRtdTheme.Navigation.enable(true);
-        });
-    </script>
+
+<footer class="container-fluid wm-page-content"><p>Copyright © 2026 EnterpriseWorx, maintained by the VerityRisk team.</p>
+  <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a> using <a href="https://github.com/gristlabs/mkdocs-windmill">Windmill</a> theme by Grist Labs.</p>
+</footer>
 
 <script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
 </script></body>
 </html>
-
 <!--
-MkDocs version : 1.6.1
-Build Date UTC : 2025-08-11 09:28:04.001486+00:00
+MkDocs version : ProperDocs 1.6.7
+Build Date UTC : 2026-09-16 10:37:45.374882+00:00
 -->
