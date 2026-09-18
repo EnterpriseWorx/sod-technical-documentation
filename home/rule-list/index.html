@@ -94,7 +94,7 @@ if (is_top_frame) { $('body').addClass('wm-top-page'); }
 
     <h1 id="rule-list">Rule List</h1>
 <p>The <strong>Rule List</strong> is where you browse SoD processes and maintain the rules that
-detect conflicting access.</p>
+detect SoD violations.</p>
 <p><strong>Permission:</strong> <code>RuleView</code> to open the list. <code>RuleUpdate</code> to add or edit a rule.</p>
 <h2 id="open-the-process-list">Open the process list</h2>
 <ul>
@@ -126,6 +126,14 @@ detect conflicting access.</p>
 <ul>
 <li>Click <strong>View</strong> on a process to open its rule list.</li>
 </ul>
+<!--
+  File: img/console/rule-list/open-page.png
+  Capture Home >> Rule List. Full page with the left menu visible and Rule List
+  selected. Show the Process List table (Key, Description, Rule Count). Hide
+  customer-identifying data.
+-->
+
+<p><a class="glightbox" href="../../img/console/rule-list/open-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/console/rule-list/open-page.png" /></a></p>
 <h2 id="review-rules-in-a-process">Review rules in a process</h2>
 <p>The rule list title is <code>{process key} Rule List</code>. Use the back control to return
 to the process list.</p>
@@ -151,11 +159,11 @@ to the process list.</p>
 </tr>
 <tr>
 <td>Transaction A</td>
-<td>Transaction on side A of the conflict</td>
+<td>Transaction on side A of the rule</td>
 </tr>
 <tr>
 <td>Transaction B</td>
-<td>Transaction on side B of the conflict</td>
+<td>Transaction on side B of the rule</td>
 </tr>
 <tr>
 <td>Approver Role</td>
@@ -164,6 +172,15 @@ to the process list.</p>
 </tbody>
 </table>
 <p>You can search, filter, sort, and export this list.</p>
+<!--
+  File: img/console/sub-rule-list/open-page.png
+  Capture a process rule list after clicking View on a process. The page title
+  should be "{process key} Rule List". Show columns ID, Risk Rating, Rule Access
+  Risk, Transaction A, Transaction B, Approver Role. Hide sensitive descriptions
+  if needed.
+-->
+
+<p><a class="glightbox" href="../../img/console/sub-rule-list/open-page.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/console/sub-rule-list/open-page.png" /></a></p>
 <h2 id="add-a-rule">Add a rule</h2>
 <ul>
 <li>Open the rule list for the process.</li>
@@ -182,6 +199,14 @@ you and cannot be changed. Rule ID plus process must be unique.</p>
 <li>Update the fields.</li>
 <li>Click <strong>Save</strong>.</li>
 </ul>
+<!--
+  File: img/console/sub-rule-list/edit-rule.png
+  Capture the New/Update Rule dialog. Show Process, Rule ID, Risk Rating,
+  Probability, Source Type, transactions, Program A/B, Activities A/B, and
+  Approver Role. Hide customer-specific program names if they are sensitive.
+-->
+
+<p><a class="glightbox" href="../../img/console/sub-rule-list/edit-rule.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="" src="../../img/console/sub-rule-list/edit-rule.png" /></a></p>
 <h2 id="rule-fields">Rule fields</h2>
 <table>
 <thead>
@@ -249,9 +274,9 @@ you and cannot be changed. Rule ID plus process must be unique.</p>
 </tr>
 </tbody>
 </table>
-<p>A rule defines a conflict between <strong>side A</strong> and <strong>side B</strong>. A side can use
-programs, activities, or both. You can also define a one-sided rule by filling
-in only side A or only side B.</p>
+<p>A rule defines an SoD violation between <strong>side A</strong> and <strong>side B</strong>. A side can
+use programs, activities, or both. You can also define a one-sided rule by
+filling in only side A or only side B.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When <strong>Approver Role</strong> is set, operator mitigations for that rule wait for
